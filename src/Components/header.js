@@ -71,7 +71,7 @@ class Header extends React.Component{
     componentDidMount()
 {
     axios({
-        url:'http://localhost:8080/signups',
+        url:'https://desolate-meadow-07839.herokuapp.com/signups',
         method:'get',
         headers:{'content-Type':'application/json'},
 
@@ -176,7 +176,7 @@ createaccount =(state,value)=>{
         const mail=mails.indexOf(email)
 
         axios({
-            url:'http://localhost:8080/signup',
+            url:'https://desolate-meadow-07839.herokuapp.com/signup',
             method:'POST',
             headers:{'content-Type':'application/json'},
             data:
@@ -235,7 +235,7 @@ console.log(responses);
 
 
  axios({
-     url:'http://localhost:8080/login',
+     url:'https://desolate-meadow-07839.herokuapp.com/login',
      method:'POST',
      headers:{'content-Type':'application/json'},
      data:{
