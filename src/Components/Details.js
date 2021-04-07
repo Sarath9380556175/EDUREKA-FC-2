@@ -66,7 +66,7 @@ class Details extends React.Component {
         const resId=qs.restaurant;
 
         axios({
-            url:`http://localhost:8080/getRestaurantById/${resId}`,
+            url:`https://desolate-meadow-07839.herokuapp.com/getRestaurantById/${resId}`,
             method:'GET',
             headers:{'content-Type':'application/json'}
         }) 
@@ -86,7 +86,7 @@ class Details extends React.Component {
       if(state=='isonlineorderopen')
       {
          axios({
-             url:`http://localhost:8080/getrestauantbyitem/${restaurantId}`,
+             url:`https://desolate-meadow-07839.herokuapp.com/getrestauantbyitem/${restaurantId}`,
              method:'GET',
              headers:{'content-Type':'application/json'}
          })
@@ -206,7 +206,7 @@ this.setState({items:items, subTotal:total})
     }
 
     getData = (data) => {
-        return fetch(`http://localhost:8080/payment`, {
+        return fetch(`https://desolate-meadow-07839.herokuapp.com/payment`, {
             method: "POST",
             headers: {
                 Accept: "application/json",
@@ -230,7 +230,7 @@ this.setState({items:items, subTotal:total})
         const {firstname,lastname,password,gender}=this.state;
 
         axios({
-            url:'http://localhost:8080/signup',
+            url:'https://desolate-meadow-07839.herokuapp.com/signup',
             method:'POST',
             headers:{'content-Type':'application/json'},
             data:
